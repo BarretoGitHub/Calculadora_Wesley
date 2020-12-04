@@ -1,8 +1,12 @@
 package calculadora_interface;
 
+import java.awt.Container;
+import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.Insets;
 import javax.swing.JButton;
+import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -44,6 +48,20 @@ public class Calculadora extends JFrame {
         pack();
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+    }
+    
+    private void adicionarComponente(Container panel, JComponent component, int x, int y, int pos, int font, int width, int height, int fill) {
+        constraints.gridx = x;
+        constraints.gridy = y;
+        constraints.insets = new Insets(4, 4, 4, 4);
+        constraints.anchor = pos;
+        constraints.gridwidth = width;
+        constraints.gridheight = height;
+        constraints.fill = fill;
+
+        component.setFont(new Font("arial", font, 12));
+        layout.setConstraints(component, constraints);
+        panel.add(component);
     }
 
 }
