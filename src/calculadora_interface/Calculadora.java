@@ -139,11 +139,12 @@ public class Calculadora extends JFrame {
         butMult.addActionListener(e -> field.setText("*"));
         butMenos.addActionListener(e -> field.setText("-"));
         butMais.addActionListener(e -> field.setText("+"));
+        butIgual.addActionListener(this::ActionListener);
 
     }
 
     public void ActionListener(ActionEvent e) {
-        field.setText("");
+        field.setText("0.0");
     }
 
 }
