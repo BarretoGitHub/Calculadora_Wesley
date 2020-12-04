@@ -16,6 +16,7 @@ import javax.swing.border.Border;
 
 public class Calculadora extends JFrame {
 
+    Operacoes operacoes;
     private JButton but0;
     private JButton but1;
     private JButton but2;
@@ -162,43 +163,22 @@ public class Calculadora extends JFrame {
     public void ActionListener(ActionEvent e) {
         field.setText("0.0");
         double n1 = Double.parseDouble(field.getText());
-
-        if (e.getSource() == but1) {
-        }
-        if (e.getSource() == but2) {
-        }
-        if (e.getSource() == but3) {
-        }
-        if (e.getSource() == but4) {
-        }
-        if (e.getSource() == but5) {
-        }
-        if (e.getSource() == but6) {
-        }
-        if (e.getSource() == but7) {
-        }
-        if (e.getSource() == but8) {
-        }
-        if (e.getSource() == but9) {
-        }
-        
-        
-        
-        
-        
-        
+        String v1;
         
         if (e.getSource() == butMais) {
+            //operacoes.somar(n1, n1);
         }
         if (e.getSource() == butMenos) {
+           // operacoes.subtrair(n1, n1);
         }
         if (e.getSource() == butMult) {
+           // operacoes.multiplicar(n1, n1);
         }
         if (e.getSource() == butDiv) {
+           // operacoes.dividir(n1, n1);
         }
         if (e.getSource() == butIgual) {
-            field.setText("Igual");
+            field.setText("0.0");
         }
     }
-
 }
