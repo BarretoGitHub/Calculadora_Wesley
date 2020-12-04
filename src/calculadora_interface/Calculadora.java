@@ -99,5 +99,30 @@ public class Calculadora extends JFrame {
         butMenos = new JButton("-");
         butDiv = new JButton("/");
         butMult = new JButton("*");
+        
+        
+        adicionarComponente(panel1, field, 0, 0, GridBagConstraints.CENTER, Font.BOLD, 1, 1, GridBagConstraints.NONE);
+        adicionarComponente(panel2, but0, 0, 4, GridBagConstraints.CENTER, Font.BOLD, 1, 1, GridBagConstraints.NONE);
+        adicionarComponente(panel2, but1, 0, 3, GridBagConstraints.CENTER, Font.BOLD, 1, 1, GridBagConstraints.NONE);
+        adicionarComponente(panel2, but2, 1, 3, GridBagConstraints.CENTER, Font.BOLD, 1, 1, GridBagConstraints.NONE);
+        adicionarComponente(panel2, but3, 2, 3, GridBagConstraints.CENTER, Font.BOLD, 1, 1, GridBagConstraints.NONE);
+        adicionarComponente(panel2, but4, 0, 2, GridBagConstraints.CENTER, Font.BOLD, 1, 1, GridBagConstraints.NONE);
+        adicionarComponente(panel2, but5, 1, 2, GridBagConstraints.CENTER, Font.BOLD, 1, 1, GridBagConstraints.NONE);
+        adicionarComponente(panel2, but6, 2, 2, GridBagConstraints.CENTER, Font.BOLD, 1, 1, GridBagConstraints.NONE);
+        adicionarComponente(panel2, but7, 0, 1, GridBagConstraints.CENTER, Font.BOLD, 1, 1, GridBagConstraints.NONE);
+        adicionarComponente(panel2, but8, 1, 1, GridBagConstraints.CENTER, Font.BOLD, 1, 1, GridBagConstraints.NONE);
+        adicionarComponente(panel2, but9, 2, 1, GridBagConstraints.CENTER, Font.BOLD, 1, 1, GridBagConstraints.NONE);
+        adicionarComponente(panel2, butIgual, 1, 4, GridBagConstraints.CENTER, Font.BOLD, 2, 1, GridBagConstraints.HORIZONTAL);
+
+        adicionarComponente(panel3, butMais, 0, 0, GridBagConstraints.CENTER, Font.BOLD, 2, 1, GridBagConstraints.HORIZONTAL);
+        adicionarComponente(panel3, butMenos, 0, 1, GridBagConstraints.CENTER, Font.BOLD, 2, 1, GridBagConstraints.HORIZONTAL);
+        adicionarComponente(panel3, butDiv, 0, 2, GridBagConstraints.CENTER, Font.BOLD, 2, 1, GridBagConstraints.HORIZONTAL);
+        adicionarComponente(panel3, butMult, 0, 3, GridBagConstraints.CENTER, Font.BOLD, 2, 1, GridBagConstraints.HORIZONTAL);
+
+        adicionarComponente(this, panel1, 0, 0, GridBagConstraints.CENTER, Font.BOLD, 2, 1, GridBagConstraints.BOTH);
+        adicionarComponente(this, panel2, 0, 1, GridBagConstraints.CENTER, Font.BOLD, 1, 1, GridBagConstraints.BOTH);
+        adicionarComponente(this, panel3, 1, 1, GridBagConstraints.CENTER, Font.BOLD, 1, 1, GridBagConstraints.BOTH);
+
+        
     }
 }
