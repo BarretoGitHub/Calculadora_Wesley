@@ -19,6 +19,32 @@ public class Principal {
 
         flagC = JOptionPane.showInputDialog("Digite um número");
         n2 = Double.parseDouble(flagC);
+        
+        efetuarCalculo(n1, operacao, n2);
+    }
+    
+    private static void efetuarCalculo(double n1, int operacao, double n2) {
+        double resultado = 0;
+        String flag = "";
+
+        if (operacao == 1) {
+            flag = " + ";
+            resultado = n1 + n2;
+        } else if (operacao == 2) {
+            flag = "-";
+            resultado = n1 - n2;
+        }
+        else if (operacao == 3) {
+            flag = "/";
+            resultado = n1 / n2;
+        }
+        else if (operacao == 4) {
+            flag = "*";
+            resultado = n1 * n2;
+        }
+
+        JOptionPane.showMessageDialog(null, String.format("%.2f %s %.2f = %.2f", n1, flag, n2, resultado));
+
     }
 
 }
