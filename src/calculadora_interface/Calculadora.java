@@ -5,6 +5,7 @@ import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.awt.event.ActionEvent;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JComponent;
@@ -43,6 +44,8 @@ public class Calculadora extends JFrame {
 
     public Calculadora() {
         super("Calculadora - DSI 2020");
+        criarComponentes();
+        ajustarJanela();
     }
 
     private void ajustarJanela() {
@@ -51,7 +54,7 @@ public class Calculadora extends JFrame {
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
-    
+
     private void adicionarComponente(Container panel, JComponent component, int x, int y, int pos, int font, int width, int height, int fill) {
         constraints.gridx = x;
         constraints.gridy = y;
@@ -66,7 +69,6 @@ public class Calculadora extends JFrame {
         panel.add(component);
     }
 
-    
     private void criarComponentes() {
         layout = new GridBagLayout();
         constraints = new GridBagConstraints();
@@ -99,8 +101,7 @@ public class Calculadora extends JFrame {
         butMenos = new JButton("-");
         butDiv = new JButton("/");
         butMult = new JButton("*");
-        
-        
+
         adicionarComponente(panel1, field, 0, 0, GridBagConstraints.CENTER, Font.BOLD, 1, 1, GridBagConstraints.NONE);
         adicionarComponente(panel2, but0, 0, 4, GridBagConstraints.CENTER, Font.BOLD, 1, 1, GridBagConstraints.NONE);
         adicionarComponente(panel2, but1, 0, 3, GridBagConstraints.CENTER, Font.BOLD, 1, 1, GridBagConstraints.NONE);
@@ -138,6 +139,11 @@ public class Calculadora extends JFrame {
         butMult.addActionListener(e -> field.setText("*"));
         butMenos.addActionListener(e -> field.setText("-"));
         butMais.addActionListener(e -> field.setText("+"));
-         
+
     }
+
+    public void ActionListener(ActionEvent e) {
+        field.setText("");
+    }
+
 }
