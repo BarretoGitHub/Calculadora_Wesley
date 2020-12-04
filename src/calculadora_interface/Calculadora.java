@@ -139,12 +139,66 @@ public class Calculadora extends JFrame {
         butMult.addActionListener(e -> field.setText("*"));
         butMenos.addActionListener(e -> field.setText("-"));
         butMais.addActionListener(e -> field.setText("+"));
+
         butIgual.addActionListener(this::ActionListener);
+        butDiv.addActionListener(this::ActionListener);
+        butMult.addActionListener(this::ActionListener);
+        butMenos.addActionListener(this::ActionListener);
+        butMais.addActionListener(this::ActionListener);
+
+        but0.addActionListener(this::ActionListener);
+        but1.addActionListener(this::ActionListener);
+        but2.addActionListener(this::ActionListener);
+        but3.addActionListener(this::ActionListener);
+        but4.addActionListener(this::ActionListener);
+        but5.addActionListener(this::ActionListener);
+        but6.addActionListener(this::ActionListener);
+        but7.addActionListener(this::ActionListener);
+        but8.addActionListener(this::ActionListener);
+        but9.addActionListener(this::ActionListener);
 
     }
 
     public void ActionListener(ActionEvent e) {
         field.setText("0.0");
+        double n1 = Double.parseDouble(field.getText());
+
+        if (e.getSource() == but1) {
+        }
+        if (e.getSource() == but2) {
+        }
+        if (e.getSource() == but3) {
+        }
+        if (e.getSource() == but4) {
+        }
+        if (e.getSource() == but5) {
+        }
+        if (e.getSource() == but6) {
+        }
+        if (e.getSource() == but7) {
+        }
+        if (e.getSource() == but8) {
+        }
+        if (e.getSource() == but9) {
+        }
+        
+        
+        
+        
+        
+        
+        
+        if (e.getSource() == butMais) {
+        }
+        if (e.getSource() == butMenos) {
+        }
+        if (e.getSource() == butMult) {
+        }
+        if (e.getSource() == butDiv) {
+        }
+        if (e.getSource() == butIgual) {
+            field.setText("Igual");
+        }
     }
 
 }
