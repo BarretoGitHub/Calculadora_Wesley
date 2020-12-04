@@ -123,6 +123,21 @@ public class Calculadora extends JFrame {
         adicionarComponente(this, panel2, 0, 1, GridBagConstraints.CENTER, Font.BOLD, 1, 1, GridBagConstraints.BOTH);
         adicionarComponente(this, panel3, 1, 1, GridBagConstraints.CENTER, Font.BOLD, 1, 1, GridBagConstraints.BOTH);
 
-        
+        but7.addActionListener(e -> field.setText("7"));
+        but8.addActionListener(e -> field.setText("8"));
+        but9.addActionListener(e -> field.setText("9"));
+        but4.addActionListener(e -> field.setText("4"));
+        but5.addActionListener(e -> field.setText("5"));
+        but6.addActionListener(e -> field.setText("6"));
+        but1.addActionListener(e -> field.setText("1"));
+        but2.addActionListener(e -> field.setText("0"));
+        but3.addActionListener(e -> field.setText("3"));
+        but0.addActionListener(e -> field.setText("0"));
+
+        butDiv.addActionListener(e -> field.setText("/"));
+        butMult.addActionListener(e -> field.setText("*"));
+        butMenos.addActionListener(e -> field.setText("-"));
+        butMais.addActionListener(e -> field.setText("+"));
+         
     }
 }
